@@ -7,10 +7,12 @@ This action code performs the SAFE (Snips Assistant For Emergencies) procedures 
 
 ## Features
 
-With the hotword "hey Snips" the assistant starts to listen and initiates its procedure:
-- Help for emergency dialogue with list of contact people+numbers to call in case of emergency.
-- Alarm bell raise or clear management.
-- Internet VoIP-to-mobile adapter to call or calls to be performed.
+This is an app to provide basic assistance to old or somehow impaired people at home, using the dialog features of the snips platform.
+
+With the hotword "hey Snips" the assistant starts to listen and initiates its procedure.
+You can ask the voice assistant for help, or press the emergency button.
+The assistant will then ask you who to call among the contacts, or if the alarm should be raised.
+If no answer is provided, the alarm will raise automatically and the default contact will be called.
 
 ### Intents
 
@@ -30,7 +32,25 @@ The app is developed for raspberry pi with reSpeaker2Mic hat (for button, leds, 
 The snips voice platform will be installed in the [Raspberry pi B+](https://docs.snips.ai/getting-started/quick-start-raspberry-pi).
 The app requires linphone software console [linphonec](https://www.linphone.org/technical-corner/linphone) to be deployed and available in command line.
 
-## Installation
+## Full Installation
+
+Go to your snips console and create an assistant. In this assistant add the SAFE app.
+
+If you have the snips platform already installed you are now able to install your assistant with [sam](https://snips.gitbook.io/getting-started/installation).
+
+First run `sam connect` to connect to your raspberry.
+
+Then run `sam install assistant` and choose the assistant you just created.
+
+To be able to access GPIO and SPI hardware, `_snips-skills` user need to be appended with `spi`, `gpio`, `audio` groups. Run the following command on your snips device:
+
+```bash
+sudo usermod -a -G spi,gpio,audio _snips-skills
+```
+
+You can now feel SAFE !
+
+## App-only Installation
 
 #### By using `sam`:
 
@@ -39,7 +59,6 @@ The app requires linphone software console [linphonec](https://www.linphone.org/
 ```bash
 sam install actions -g https://github.com/maremoto/snips-app-safe.git
 ```
-
 To be able to access GPIO and SPI hardware, `_snips-skills` user need to be appended with `spi`, `gpio`, `audio` groups. Run the following command on your snips device:
 
 ```bash
@@ -178,7 +197,7 @@ You should record it with a clear message, e.g. "Please help, there is an emerge
 
 ## To Do
 
-- Separate softphone management for base and satellites.
+- [ ] Separate softphone management for base and satellites.
 
 ## Copyright
 
