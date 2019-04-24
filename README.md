@@ -9,10 +9,10 @@ This action code performs the SAFE (Snips Assistant For Emergencies) procedures 
 
 This is an app to provide basic assistance to old or somehow impaired people at home, using the dialog features of the snips platform.
 
-With the hotword "hey Snips" the assistant starts to listen and initiates its procedure.
-You can ask the voice assistant for help, or press the emergency button.
-The assistant will then ask you who to call among the contacts, or if the alarm should be raised.
-If no answer is provided, the alarm will raise automatically and the default contact will be called.
+- With the hotword "hey Snips" the assistant starts to listen and initiates its procedure.
+- You can ask the voice assistant for help, or just press the emergency button.
+- The assistant will require who to call among the contacts, or if the alarm should be raised.
+- If no answer is provided, the alarm will raise automatically and the default contact will be called.
 
 ### Intents
 
@@ -24,13 +24,15 @@ If no answer is provided, the alarm will raise automatically and the default con
 ### Button
 
 Pressing the button will be equivalent to the hotword + intent "helpMe".
+Furthermore, pushing the button will end a call or to stop de sound alarm.
 
 ## Hardware and third party software
 
 The app is developed for raspberry pi with reSpeaker2Mic hat (for button, leds, microphone and speaker capabilities), and fully tested in [Snips - Seeed voice interaction base kit](https://www.seeedstudio.com/Snips-Voice-Interaction-Base-Kit.html).
 
 The snips voice platform will be installed in the [Raspberry pi B+](https://docs.snips.ai/getting-started/quick-start-raspberry-pi).
-The app requires linphone software console [linphonec](https://www.linphone.org/technical-corner/linphone) to be deployed and available in command line.
+
+The app requires linphone software console [linphonec](https://www.linphone.org/technical-corner/linphone) to be deployed and available in command line. Find detailed instructios at the [resources project](https://github.com/maremoto/snips-resources-safe/blob/master/README.md).
 
 ## Full Installation
 
@@ -190,7 +192,7 @@ inject_contacts.py
 deactivate
 ```
 
-## Record your own sos message
+## Record your own SOS message
 
 The sos mesage is a wav file that will be automatically played when the system takes the default call actions (when the client is not able to skpeak or indicate who to call).
 You should record it with a clear message, e.g. "Please help, there is an emergency at 5 Elm st.".
@@ -201,4 +203,4 @@ You should record it with a clear message, e.g. "Please help, there is an emerge
 
 ## Copyright
 
-This library is provided by [Alaba](https://www.alaba.io) as Open Source software. See [LICENSE](https://github.com/maremoto/snips-app-safe/blob/master/LICENSE) for more information.
+This application is provided by [Alaba](https://www.alaba.io) as Open Source software. See [LICENSE](https://github.com/maremoto/snips-app-safe/blob/master/LICENSE) for more information.
