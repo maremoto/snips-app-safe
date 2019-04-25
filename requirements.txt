@@ -1,0 +1,4 @@
+RPi.GPIO
+smbus2
+hermes-python>=0.1
+paho-mqtt

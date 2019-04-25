@@ -1,0 +1,31 @@
+{
+    "error": {
+        "doNotUnderstand": "Sorry, I dont think I understood.",
+        "silenceAlarmOn": "I have no correct answers for {{ timeout }} seconds.",
+        "automaticAlarmOn": "Fatal failure, unable to call to anyone.",
+        "unknownContact": "The name {{ contact_name }} is not in the contacts list.",
+        "noContact": "You should select someone among your contacts.",
+        "systemFatal": "The system is not working properly."
+    },
+
+
+    "conversation": {
+        "whoToCall": "I will call someone, who do you want me to call?",
+        "suggestContact": "Maybe you would like to call {{ contact_name }}",
+        "listUnion": "or {{ contact_name }}",
+        "areYouOk": "{{ client_name }}, are you ok now?",
+        "sorry": "I'm sorry you're not well.",
+        "goodBye": "Nice to talk to you {{ client_name }}, take care."
+    },
+    
+    "call": {
+        "callingNow": "Calling to {{ contact_name }}, {{ contact_number }}. Press the button to cancel or hang up.",
+        "callEnd": "The call is finished.",
+        "callFailure": "Unable to communicate to {{ contact_name }}."
+    },
+    
+    "alarm": {
+        "on": "The sound alarm will be on, to turn it off press the button.",
+        "off": "Alarm sound off."
+    }
+}
