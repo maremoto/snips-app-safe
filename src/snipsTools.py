@@ -1,6 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+'''
+This file comes from:
+https://github.com/snipsco/snips-demo-dev-kit.git
+Contributor/author: CoorFun
+License: MIT
+
+This header is not part of the file, as it had none, and is added just to indicate origin and credits.
+'''
+
 import configparser
 import io
 import json
