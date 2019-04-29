@@ -1,5 +1,11 @@
 #/usr/bin/env bash -e
 
+#The initial part of this file (from line 1 to 53) comes from:
+#https://github.com/snipsco/snips-demo-dev-kit.git
+#Contributor/author: CoorFun
+#License: MIT
+#This header is not part of the file, as it had none, and is added just to indicate origin and credits.
+
 DEFAULT_CONFIG_FILE="./config.default.ini"
 CONFIG_FILE="./config.ini"
 
