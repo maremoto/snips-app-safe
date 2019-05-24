@@ -3,6 +3,8 @@ SAFE APP code
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/maremoto/snips-app-safe/blob/master/LICENSE)
 
+<img src="https://github.com/maremoto/snips-resources-safe/blob/master/docs/SAFE.png" alt="SAFE logo">
+
 This action code performs the SAFE (Snips Assistant For Emergencies) procedures as a human interface for Snips Voice Platform.
 
 ## Features
@@ -196,6 +198,12 @@ deactivate
 
 The sos mesage is a wav file that will be automatically played when the system takes the default call actions (when the client is not able to skpeak or indicate who to call).
 You should record it with a clear message, e.g. "Please help, there is an emergency at 5 Elm st.".
+
+## Dialogue flow
+
+This is the conversation messages flow for a voice dialogue with the device.
+
+<img src="https://github.com/maremoto/snips-resources-safe/blob/master/docs/SAFE%20dialogue.png" alt="SAFE dialogue">
 
 ## To Do
 
