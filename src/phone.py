@@ -68,6 +68,10 @@ class Phone(object):
     def _check_call(self):
         if self.__call_proc is None: return
            
+            # toggle hotword OFF for base calls
+        if self.__calling_site_id == self.__base_site_id:
+            subprocess.call("mosquitto_pub -t 'hermes/hotword/toggleOff' -m '{\"siteId\": \"safebase\"}'",shell=True)
+        
             # check and read output
         rc = self.__call_proc.poll()
         txt = self.__call_proc.stdout.readline()
@@ -98,6 +102,11 @@ class Phone(object):
                 res = RESULT_FATAL
             if self.__manually_terminated:
                 res = 0
+
+                # toggle hotword ON for base calls
+            if self.__calling_site_id == self.__base_site_id:
+                subprocess.call("mosquitto_pub -t 'hermes/hotword/toggleOn' -m '{\"siteId\": \"safebase\"}'",shell=True)
+
             print("CALL RESULT",rc,"->",res)
             self._ended_call(res)
         else:
